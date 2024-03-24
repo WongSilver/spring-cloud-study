@@ -8,9 +8,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient // 使用consul为注册中心
 @EnableFeignClients // 使用openfeign
-public class MainOpenFeign80 {
+public class MainOpenFeign8000 {
 
     public static void main(String[] args) {
-        SpringApplication.run(MainOpenFeign80.class, args);
+        SpringApplication.run(MainOpenFeign8000.class, args);
     }
 }
