@@ -1,0 +1,12 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: nacos-order-consume
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 # nacos地址
+
+service-url:
+  nacos-user-service: http://nacos-pay-provider

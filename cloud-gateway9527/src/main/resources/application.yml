@@ -1,0 +1,46 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    consul:
+      port: 8500
+      host: localhost
+      discovery:
+        prefer-agent-address: true
+        service-name: ${spring.application.name}
+    gateway:
+      routes:
+        - id: pay_getById                 # 路由ID, 要求唯一
+          uri: lb://cloud-payment-service # 匹配后提供服务的地址
+          predicates:
+            - Path=/pay/gateway/get/**    # 断言, 路径匹配后进行路由
+            - Custom=gold
+        #   - name: Custom
+        #     args:
+        #       userLevel: gold
+        #   - Header=X-Request-Id, \d+
+        #   - Cookie=username,wong
+        #   - After=2024-03-19T21:22:00.000+08:00[Asia/Shanghai]
+        #   - Before=2024-03-19T21:26:00.000+08:00[Asia/Shanghai]
+        #   - Between=2024-03-19T21:29:00.000+08:00[Asia/Shanghai],2024-03-19T21:30:00.000+08:00[Asia/Shanghai]
+
+        - id: pay_getInfo
+          uri: lb://cloud-payment-service # 匹配后提供服务的地址
+          predicates:
+            - Path=/pay/gateway/getInfo/**
+
+        - id: pay_getFilter
+          uri: lb://cloud-payment-service # 匹配后提供服务的地址
+          predicates:
+            - Path=/pay/gateway/filter/**
+          filters:
+            - CustomSingle=wong
+          #  - RedirectTo=302, https://baidu.com
+          #  - SetPath=/pay/gateway/{segment}
+          #  - PrefixPath=/pay
+          #  - AddRequestHeader=X-Request-Wong,Wong
+          #  - RemoveRequestHeader=sec-fetch-site
+          #  - AddResponseHeader=test, wongsilver
+

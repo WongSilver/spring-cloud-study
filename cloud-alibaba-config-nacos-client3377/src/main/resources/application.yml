@@ -1,0 +1,7 @@
+server:
+  port: 3377
+spring:
+  profiles:
+    active: prod
+#    active: test
+#    active: dev
