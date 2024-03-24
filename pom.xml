@@ -11,11 +11,9 @@
     <modules>
         <module>generator-mybatis</module>
         <module>cloud-provider-payment8001</module>
-        <module>cloud-consumer-order80</module>
+        <module>cloud-consumer-order8000</module>
         <module>cloud-api-commons</module>
-        <module>cloud-provider-payment8002</module>
-        <module>cloud-provider-payment8003</module>
-        <module>cloud-consumer-order-feign80</module>
+        <module>cloud-consumer-order-feign8000</module>
         <module>cloud-gateway9527</module>
         <module>cloud-alibaba-provider-payment9001</module>
         <module>cloud-alibaba-consume-order9000</module>

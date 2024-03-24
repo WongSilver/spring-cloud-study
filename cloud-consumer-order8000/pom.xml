@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>cloud-consumer-order80</artifactId>
+    <artifactId>cloud-consumer-order8000</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
