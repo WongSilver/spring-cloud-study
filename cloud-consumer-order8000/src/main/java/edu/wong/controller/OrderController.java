@@ -25,32 +25,32 @@ public class OrderController {
     private RestTemplate restTemplate;
 
     @PostMapping("/pay/add")
-    public Result addOrder(@RequestBody PayDTO payDTO) {
+    public Object addOrder(@RequestBody PayDTO payDTO) {
         return restTemplate.postForObject(PAYMENT_URL + "/pay/add", payDTO, Result.class);
     }
 
     @DeleteMapping("/pay/del/{id}")
-    public Result delOrder(@PathVariable("id") Integer id) {
+    public Object delOrder(@PathVariable("id") Integer id) {
         return restTemplate.exchange(PAYMENT_URL + "/pay/del/" + id, HttpMethod.DELETE, null, Result.class).getBody();
     }
 
     @PutMapping("/pay/update")
-    public Result delOrder(@RequestBody PayDTO payDTO) {
+    public Object delOrder(@RequestBody PayDTO payDTO) {
         return restTemplate.exchange(PAYMENT_URL + "/pay/update/", HttpMethod.PUT, new HttpEntity<>(payDTO), Result.class).getBody();
     }
 
     @GetMapping("/pay/get/{id}")
-    public Result getPayInfo(@PathVariable("id") Integer id) {
+    public Object getPayInfo(@PathVariable("id") Integer id) {
         return restTemplate.getForObject(PAYMENT_URL + "/pay/get/" + id, Result.class, id);
     }
 
     @GetMapping("/pay/getAll")
-    public Result getPayListInfo() {
+    public Object getPayListInfo() {
         return restTemplate.getForObject(PAYMENT_URL + "/pay/getAll", Result.class);
     }
 
     @GetMapping("/pay/getInfo")
-    public Result<String> getInfo() {
+    public Object getInfo() {
         return restTemplate.getForObject(PAYMENT_URL + "/pay/getInfo", Result.class);
     }
 

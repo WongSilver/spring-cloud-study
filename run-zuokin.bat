@@ -1,1 +1,0 @@
-java -jar zipkin-server-3.1.1-exec.jar

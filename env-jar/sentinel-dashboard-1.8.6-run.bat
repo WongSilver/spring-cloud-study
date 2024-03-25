@@ -1,0 +1,1 @@
+java -jar sentinel-dashboard-1.8.6.jar
