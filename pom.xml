@@ -18,7 +18,7 @@
         <module>cloud-alibaba-provider-payment9001</module>
         <module>cloud-alibaba-consume-order9000</module>
         <module>cloud-alibaba-config-nacos-client3377</module>
-        <module>cloud-alibaba-sentinel-servcie8401</module>
+        <module>cloud-alibaba-sentinel-service8401</module>
     </modules>
 
     <properties>
