@@ -36,6 +36,3 @@ build/
 
 ### Mac OS ###
 .DS_Store
-
-# 运行环境排除
-/env-jar/
