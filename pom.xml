@@ -19,6 +19,7 @@
         <module>cloud-alibaba-consume-order9000</module>
         <module>cloud-alibaba-config-nacos-client3377</module>
         <module>cloud-alibaba-sentinel-service8401</module>
+        <module>cloud-alibaba-sentinel-gateway9528</module>
     </modules>
 
     <properties>
