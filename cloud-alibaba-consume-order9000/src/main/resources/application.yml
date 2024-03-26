@@ -10,3 +10,7 @@ spring:
 
 service-url:
   nacos-user-service: http://nacos-pay-provider
+
+feign:
+  sentinel:
+    enabled: true
