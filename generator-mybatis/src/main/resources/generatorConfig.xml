@@ -25,8 +25,20 @@
         <javaModelGenerator targetPackage="${package.name}.entities" targetProject="src/main/java"/>
         <sqlMapGenerator targetPackage="${package.name}.mapper" targetProject="src/main/java"/>
         <javaClientGenerator targetPackage="${package.name}.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
-        
-        <table tableName="t_pay" domainObjectName="Pay">
+
+        <!--        <table tableName="t_pay" domainObjectName="Pay">-->
+        <!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+
+        <!--        <table tableName="t_Order" domainObjectName="Order">-->
+        <!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+
+<!--        <table tableName="t_storage" domainObjectName="Storage">-->
+<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+
+        <table tableName="t_account" domainObjectName="Account">
             <generatedKey column="id" sqlStatement="JDBC"/>
         </table>
 
