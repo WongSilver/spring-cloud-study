@@ -5,6 +5,7 @@
 #### 服务链路追踪(Micrometer Tracing)
 #### 服务网关(Gateway)
 #### 分布式配置管理(Consul, Nacos)
+#### 分布式事务(Seata)
 
 
 
